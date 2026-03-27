@@ -2,8 +2,33 @@ def cat_greeting(name: str, mood: str) -> str:
     return 
 
 
-def cat_comfort(topic: str, style: str) -> str:
-    return 
+def cat_comfort(level: int = 1) -> str:
+    """
+    Return a comforting cat-style message based on the comfort level.
+
+    Args:
+        level: An integer comfort level from 1 to 5.
+
+    Returns:
+        A cat-themed comfort message.
+    """
+    # possible errors
+    if not isinstance(level, int):
+        raise TypeError("level must be an integer")
+
+    if level < 1 or level > 5:
+        raise ValueError("level must be between 1 and 5")
+
+    # comfort messages
+    comfort_messages = {
+        1: "Purrr... this little sand cat wants to remind you that one small step is still progress.",
+        2: "Purrr... it is okay to slow down for a moment. A calm mind can catch tricky bugs better.",
+        3: "Purrr... everything will be okay. Take a short break, stretch a little, and come back with fresh eyes.",
+        4: "Purrrr... you have already made it this far, so do not let this bug scare you. One careful paw-step at a time.",
+        5: "PURRRR... developer emergency comfort activated. This sand cat strongly recommends water, a snack, and a tiny break before fighting the bug again. <3",
+    }
+
+    return comfort_messages[level]
 
 
 def cat_question(topic: str, tone: str) -> str:
