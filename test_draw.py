@@ -1,4 +1,4 @@
-from draw import draw_cat
+from sandcat_fun.draw import draw_cat
 
 def test_draw_cat_default_sleeping():
     """Test that the default style returns the sleeping cat."""

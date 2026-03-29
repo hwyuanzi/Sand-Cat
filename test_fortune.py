@@ -1,5 +1,5 @@
 import pytest
-from fortune import get_fortune
+from sandcat_fun.fortune import get_fortune
 
 def test_get_fortune_default():
     """Test the default fortune when no treats are explicitly provided."""
