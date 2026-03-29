@@ -1,5 +1,35 @@
 def cat_greeting(name: str, mood: str) -> str:
-    return 
+    """
+    Return a playful cat-style greeting based on the user's name and mood.
+
+    Args:
+        name: The name to greet.
+        mood: The mood of the greeting.
+
+    Returns:
+        A cat-themed greeting string.
+    """
+    if not isinstance(name, str) or not name.strip():
+        raise ValueError("name must be a non-empty string")
+
+    if not isinstance(mood, str) or not mood.strip():
+        raise ValueError("mood must be a non-empty string")
+
+    clean_name = name.strip()
+    clean_mood = mood.strip().lower()
+
+    mood_messages = {
+        "happy": f"Meow, {clean_name}! This sand cat is thrilled to see your happy paws today.",
+        "sleepy": f"Purrr... hello, {clean_name}. This sand cat hopes you get a cozy nap soon.",
+        "grumpy": f"Hiss... just kidding, {clean_name}. Even grumpy humans deserve a soft sand cat hello.",
+        "excited": f"MROW! {clean_name}, your excitement is contagious.",
+        "calm": f"Meow, {clean_name}. This sand cat approves of your calm and peaceful vibe today.",
+    }
+
+    if clean_mood not in mood_messages:
+        raise ValueError("mood must be one of: happy, sleepy, grumpy, excited, calm")
+
+    return mood_messages[clean_mood]
 
 
 def cat_comfort(level: int = 1) -> str:

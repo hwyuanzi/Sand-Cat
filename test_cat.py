@@ -1,5 +1,5 @@
 import pytest
-from sandcat_fun.cat import cat_fortune, cat_comfort
+from sandcat_fun.cat import cat_fortune, cat_comfort, cat_greeting
 
 # unit test for cat_fortune
 # tests for outputs
@@ -77,3 +77,64 @@ def test_cat_comfort_invalid_level_high():
 def test_cat_comfort_invalid_level_type():
     with pytest.raises(TypeError):
         cat_comfort("high")
+
+# unit test for cat_greeting
+# tests for outputs
+def test_cat_greeting_returns_string():
+    result = cat_greeting("Eddy", "happy")
+    assert isinstance(result, str)
+    assert "Eddy" in result
+    assert "happy paws" in result
+
+def test_cat_greeting_normalizes_name_and_mood():
+    result = cat_greeting("  Eddy  ", "  slEePy  ")
+    assert isinstance(result, str)
+    assert "Eddy" in result
+    assert "cozy nap" in result
+
+def test_cat_greeting_grumpy_message():
+    result = cat_greeting("Eddy", "grumpy")
+    assert "Eddy" in result
+    assert "grumpy humans" in result
+    assert isinstance(result, str)
+
+def test_cat_greeting_excited_message():
+    result = cat_greeting("Eddy", "excited")
+    assert "Eddy" in result
+    assert "contagious" in result
+    assert isinstance(result, str)
+
+def test_cat_greeting_calm_message():
+    result = cat_greeting("Eddy", "calm")
+    assert "Eddy" in result
+    assert "calm and peaceful" in result
+    assert isinstance(result, str)
+
+# tests for inputs
+def test_cat_greeting_empty_name():
+    with pytest.raises(ValueError):
+        cat_greeting("", "happy")
+
+def test_cat_greeting_empty_mood():
+    with pytest.raises(ValueError):
+        cat_greeting("Eddy", "")
+
+def test_cat_greeting_invalid_mood():
+    with pytest.raises(ValueError):
+        cat_greeting("Eddy", "angry")
+
+def test_cat_greeting_nonstring_name():
+    with pytest.raises(ValueError):
+        cat_greeting(123, "happy")
+
+def test_cat_greeting_nonstring_mood():
+    with pytest.raises(ValueError):
+        cat_greeting("Eddy", False)
+
+def test_cat_greeting_white_space_name():
+    with pytest.raises(ValueError):
+        cat_greeting(" ", "happy")
+
+def test_cat_greeting_white_space_mood():
+    with pytest.raises(ValueError):
+        cat_greeting("Eddy", " ")
