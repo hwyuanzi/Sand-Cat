@@ -1,19 +1,19 @@
-[![Build Status](https://github.com/swe-students-spring2026/3-package-sand_cat/actions/workflows/build.yml/badge.svg)](https://github.com/swe-students-spring2026/3-package-sand_cat/actions)
+[![Build Status](https://github.com/swe-students-spring2026/3-package-sand_cat/actions/workflows/ci.yml/badge.svg)](https://github.com/swe-students-spring2026/3-package-sand_cat/actions)
 
 # Sand Cat
 
 **Sand Cat** is a lighthearted and fun Python package designed to bring a little bit of joy, levity, and cuteness to developers' terminals. Inspired by the adorable sand cat, this package generates ASCII cat art, delivers cute greetings, predicts fortunes, and offers comforting words to developers when they face bugs. 
 
-**PyPI Package Link**: [sand-cat on PyPI]
+**PyPI Package Link**: [sand-cat on PyPI](https://pypi.org/project/sand-cat/)
 
 ---
 
 ## Team Members
-
-* 
-* 
-* 
-* 
+* [Hollan Yuan](https://github.com/hwyuanzi)
+* [Team Member 2 Name](https://github.com/username2)
+* [Team Member 3 Name](https://github.com/username3)
+* [Team Member 4 Name](https://github.com/username4)
+* [Team Member 5 Name](https://github.com/username5)
 
 ---
 
@@ -26,31 +26,33 @@ pip install sand-cat
 ```
 
 ### Example Program
-We have created a complete example program that utilizes all the functions provided by `sand_cat`. 
-You can view and run the full demonstration here: **Example Program (`src/sand_cat/__main__.py`)**
+We have created a complete example program that utilizes all the functions provided by `sandcat_fun`. 
+You can view and run the full demonstration here: **Example Program (`demo.py`)**
 
 ### Core Functions and Code Examples
 
 Our package comes with four core interactive functions. Here is how you can use them:
 
-#### 1. `cat_say(message: str, mood: str = "happy")`
-Prints an ASCII cat holding a speech bubble with your message. The cat's facial expression changes based on the mood.
+#### 1. `cat_greeting(name: str, mood: str)`
+Return a playful cat-style greeting based on the user's name and mood.
 
 ```python
-from sand_cat import cat_say
+from sandcat_fun import cat_greeting
 
-# Default happy mood
-cat_say("Hello, world!", mood="happy")
+# Happy mood
+greeting = cat_greeting("Hollan", mood="happy")
+print(greeting)
 
-# Angry mood
-cat_say("Who deleted my code?!", mood="angry")
+# Grumpy mood
+greeting = cat_greeting("Hollan", mood="grumpy")
+print(greeting)
 ```
 
 #### 2. `get_fortune(treats: int = 1)`
 The magical sand cat predicts your fortune. The more treats (fish) you offer, the better your fortune might be!
 
 ```python
-from sand_cat import get_fortune
+from sandcat_fun import get_fortune
 
 # Give the cat 5 treats
 fortune = get_fortune(treats=5)
@@ -62,7 +64,7 @@ print(fortune)
 A function for developers who are stuck on a bug. The sand cat provides comforting words.
 
 ```python
-from sand_cat import cat_comfort
+from sandcat_fun import cat_comfort
 
 # High level of comfort needed
 comfort_msg = cat_comfort(level=3)
@@ -74,7 +76,7 @@ print(comfort_msg)
 Generates and returns various cute ASCII cat text arts depending on the style parameter.
 
 ```python
-from sand_cat import draw_cat
+from sandcat_fun import draw_cat
 
 # Draw a stretching cat
 art = draw_cat(style="stretching")
