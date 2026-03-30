@@ -10,7 +10,7 @@
 
 ## Team Members
 * [Hollan Yuan](https://github.com/hwyuanzi)
-* [Team Member 2 Name](https://github.com/username2)
+* [Tuo Zhang](https://github.com/TuoZhang0902)
 * [Team Member 3 Name](https://github.com/username3)
 * [Team Member 4 Name](https://github.com/username4)
 * [Team Member 5 Name](https://github.com/username5)
