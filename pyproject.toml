@@ -8,10 +8,7 @@ version     = "0.1.0"
 description = "A playful cat-themed Python package with greeting, comfort, drawing, and fortune functions."
 authors     = [
   { name = "Tuo Zhang", email = "tz2714@nyu.edu" },
-  { name = "Teammate A", email = "xxx@xxx.com"},
-  { name = "Teammate B", email = "xxx@xxx.com"},
-  { name = "Teammate C", email = "xxx@xxx.com"},
-  { name = "Teammate D", email = "xxx@xxx.com"},
+  { name = "Hollan Yuan", email = "hy2821@nyu.edu"},
 ]
 license     = "MIT"
 readme      = "README.md"

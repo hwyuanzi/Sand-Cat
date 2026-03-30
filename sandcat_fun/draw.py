@@ -65,10 +65,10 @@ def draw_cat(style: str = "sleeping") -> str:
     else:
         # Fallback for invalid styles - a confused cat!
         art = f"""
-   /\_/\  ?
+   /\\_/\\  ?
   ( ?.? )/ 
    > ^ <  
-  /  _  \ 
+  /  _  \\ 
 [Meow? Unknown style '{style}', here is a confused cat!]
 """
     
