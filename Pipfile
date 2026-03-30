@@ -6,7 +6,6 @@ name = "pypi"
 [packages]
 
 [dev-packages]
-pytest = "==9.0.2"
-exceptiongroup = {version = "*", markers = "python_version < '3.11'"}
+pytest = "*"
 build = "*"
 twine = "*"
