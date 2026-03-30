@@ -9,4 +9,3 @@ name = "pypi"
 pytest = "*"
 build = "*"
 twine = "*"
-
