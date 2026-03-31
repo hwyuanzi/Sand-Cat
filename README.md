@@ -23,7 +23,7 @@
 | `get_fortune(treats)` | Fortune prediction based on treats given | `get_fortune(5)` |
 | `cat_comfort(level)` | Comforting words for bug-stuck devs (1–5) | `cat_comfort(3)` |
 | `draw_cat(style)` | ASCII cat art in different poses | `draw_cat("ninja")` |
-| `cat_fortune(weather, energy_level)` | Weather + energy based fortune | `cat_fortune("sunny", 8)` |
+| `cat_energy(weather, energy_level)` | Weather + energy based fortune | `cat_energy("sunny", 8)` |
 | `cat_reaction(event, intensity)` | Dramatic reaction to coding events (1–3) | `cat_reaction("deploy", 3)` |
 
 ---
@@ -112,13 +112,13 @@ print(art)
 
 Valid styles: `sleeping`, `stretching`, `sitting`, `playing`, `coding`, `ninja`, `loaf`
 
-#### 5. `cat_fortune(weather: str, energy_level: int)`
+#### 5. `cat_energy(weather: str, energy_level: int)`
 Returns a cat-style fortune based on the current weather and your energy level (1–10).
 
 ```python
-from sandcat_fun import cat_fortune
+from sandcat_fun import cat_energy
 
-fortune = cat_fortune("sunny", 8)
+fortune = cat_energy("sunny", 8)
 print(fortune)
 # "This is a zoomie-powered cat fortune for a Sunny day: ..."
 

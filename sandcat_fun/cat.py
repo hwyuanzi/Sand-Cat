@@ -65,7 +65,7 @@ def cat_comfort(level: int = 1) -> str:
     return comfort_messages[level]
 
 
-def cat_fortune(weather: str, energy_level: int) -> str:
+def cat_energy(weather: str, energy_level: int) -> str:
     """
     Return a playful cat-style fortune based on the weather and energy level.
 

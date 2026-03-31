@@ -1,49 +1,49 @@
 import pytest
-from sandcat_fun.cat import cat_fortune, cat_comfort, cat_greeting
+from sandcat_fun.cat import cat_energy, cat_comfort, cat_greeting
 
 # unit test for cat_fortune
 # tests for outputs
 def test_cat_fortune_returns_string():
-    result = cat_fortune("sunny", 2)
+    result = cat_energy("sunny", 2)
     assert isinstance(result, str)
     assert "Sunny" in result
     assert "nap-friendly" in result
 
 def test_cat_fortune_mid_energy():
-    result = cat_fortune("rainy", 5)
+    result = cat_energy("rainy", 5)
     assert "Rainy" in result
     assert "cozy" in result
 
 def test_cat_fortune_high_energy():
-    result = cat_fortune("windy", 9)
+    result = cat_energy("windy", 9)
     assert "Windy" in result
     assert "zoomie-powered" in result
 
 def test_cat_fortune_strips_and_normalizes_weather():
-    result = cat_fortune("  snowy  ", 4)
+    result = cat_energy("  snowy  ", 4)
     assert "Snowy" in result
     assert "cozy" in result
 
 # tests for inputs
 def test_cat_fortune_invalid_empty_weather():
     with pytest.raises(ValueError):
-        cat_fortune("", 5)
+        cat_energy("", 5)
 
 def test_cat_fortune_invalid_weather_name():
     with pytest.raises(ValueError):
-        cat_fortune("stormy", 5)
+        cat_energy("stormy", 5)
 
 def test_cat_fortune_invalid_energy_range_low():
     with pytest.raises(ValueError):
-        cat_fortune("sunny", 0)
+        cat_energy("sunny", 0)
 
 def test_cat_fortune_invalid_energy_range_high():
     with pytest.raises(ValueError):
-        cat_fortune("sunny", 11)
+        cat_energy("sunny", 11)
 
 def test_cat_fortune_invalid_energy_type():
     with pytest.raises(TypeError):
-        cat_fortune("sunny", "high")
+        cat_energy("sunny", "high")
 
 # unit test for cat_comfort
 # tests for outputs
