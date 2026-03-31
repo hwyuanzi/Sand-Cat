@@ -22,7 +22,7 @@ def main():
     print(draw_cat("coding"))
     print()
 
-    print("4. Cat Fortune")
+    print("4. Cat Energy")
     print(cat_energy("sunny", 8))
     print()
 
