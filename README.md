@@ -1,10 +1,10 @@
-[![Build Status](https://github.com/swe-students-spring2026/3-package-sand_cat/actions/workflows/ci.yml/badge.svg)](https://github.com/swe-students-spring2026/3-package-sand_cat/actions)
+[![CI](https://github.com/swe-students-spring2026/3-package-sand_cat/actions/workflows/ci.yml/badge.svg)](https://github.com/swe-students-spring2026/3-package-sand_cat/actions)
 
-# Sand Cat
+# 🐱 Sand Cat
 
-**Sand Cat** is a lighthearted and fun Python package designed to bring a little bit of joy, levity, and cuteness to developers' terminals. Inspired by the adorable sand cat, this package generates ASCII cat art, delivers cute greetings, predicts fortunes, and offers comforting words to developers when they face bugs. 
+**Sand Cat** is a lighthearted and fun Python package designed to bring a little bit of joy, levity, and cuteness to developers' terminals. Inspired by the adorable sand cat, this package generates ASCII cat art, delivers cute greetings, predicts fortunes, reacts dramatically to everyday programming events, and offers comforting words when you're stuck on a bug.
 
-**PyPI Package Link**: [sand-cat on PyPI](https://pypi.org/project/sand-cat/)
+**PyPI**: [sand-cat on PyPI](https://pypi.org/project/sand-cat/)
 
 ---
 
@@ -15,21 +15,47 @@
 
 ---
 
-## Installation & User Guide
+## Features
 
-To import and use this package in your own Python projects, simply install it via `pip`:
+| Function | Description | Example |
+|---|---|---|
+| `cat_greeting(name, mood)` | Playful greeting based on name and mood | `cat_greeting("Tuo", "happy")` |
+| `get_fortune(treats)` | Fortune prediction based on treats given | `get_fortune(5)` |
+| `cat_comfort(level)` | Comforting words for bug-stuck devs (1–5) | `cat_comfort(3)` |
+| `draw_cat(style)` | ASCII cat art in different poses | `draw_cat("ninja")` |
+| `cat_fortune(weather, energy_level)` | Weather + energy based fortune | `cat_fortune("sunny", 8)` |
+| `cat_reaction(event, intensity)` | Dramatic reaction to coding events (1–3) | `cat_reaction("deploy", 3)` |
+
+---
+
+## Installation
+
+To use this package in your own Python projects, install it via `pip`:
 
 ```bash
 pip install sand-cat
 ```
 
+Then import it in your code:
+
+```python
+from sandcat_fun import cat_greeting, draw_cat, cat_reaction
+```
+
+---
+
+## Usage & Code Examples
+
 ### Example Program
-We have created a complete example program that utilizes all the functions provided by `sandcat_fun`. 
-You can view and run the full demonstration here: **Example Program (`demo.py`)**
+We have a complete example program that demonstrates all functions:
+**[Example Program (`demo.py`)](./demo.py)**
 
-### Core Functions and Code Examples
+Run it with:
+```bash
+python demo.py
+```
 
-Our package comes with four core interactive functions. Here is how you can use them:
+### Function Details
 
 #### 1. `cat_greeting(name: str, mood: str)`
 Return a playful cat-style greeting based on the user's name and mood.
@@ -37,110 +63,179 @@ Return a playful cat-style greeting based on the user's name and mood.
 ```python
 from sandcat_fun import cat_greeting
 
-# Happy mood
 greeting = cat_greeting("Hollan", mood="happy")
 print(greeting)
+# "Meow, Hollan! This sand cat is thrilled to see your happy paws today."
 
-# Grumpy mood
 greeting = cat_greeting("Hollan", mood="grumpy")
 print(greeting)
+# "Hiss... just kidding, Hollan. Even grumpy humans deserve a soft sand cat hello."
 ```
 
+Valid moods: `happy`, `sleepy`, `grumpy`, `excited`, `calm`
+
 #### 2. `get_fortune(treats: int = 1)`
-The magical sand cat predicts your fortune. The more treats (fish) you offer, the better your fortune might be!
+The magical sand cat predicts your fortune. More treats = better fortune!
 
 ```python
 from sandcat_fun import get_fortune
 
-# Give the cat 5 treats
 fortune = get_fortune(treats=5)
 print(fortune)
-# Output example: "Meow! Thank you! Your code will compile flawlessly today!"
+# "Purrr! The Sand Cat is pleased. A bug you've been chasing for days will suddenly make sense today!"
 ```
 
 #### 3. `cat_comfort(level: int = 1)`
-A function for developers who are stuck on a bug. The sand cat provides comforting words.
+Comforting words for developers stuck on a bug. Level ranges from 1 (mild) to 5 (emergency comfort).
 
 ```python
 from sandcat_fun import cat_comfort
 
-# High level of comfort needed
-comfort_msg = cat_comfort(level=3)
+comfort_msg = cat_comfort(level=5)
 print(comfort_msg)
-# Output example: "Purrrr... Everything will be okay. Take a break, drink some water. <3"
+# "PURRRR... developer emergency comfort activated. ..."
 ```
 
 #### 4. `draw_cat(style: str = "sleeping")`
-Generates and returns various cute ASCII cat text arts depending on the style parameter.
+Generates cute ASCII cat text art in various poses.
 
 ```python
 from sandcat_fun import draw_cat
 
-# Draw a stretching cat
-art = draw_cat(style="stretching")
+art = draw_cat(style="coding")
 print(art)
+#    /\_/\
+#   ( @.@ )  [Bug]
+#    > ^ <   /
+#   / [___] \
+```
+
+Valid styles: `sleeping`, `stretching`, `sitting`, `playing`, `coding`, `ninja`, `loaf`
+
+#### 5. `cat_fortune(weather: str, energy_level: int)`
+Returns a cat-style fortune based on the current weather and your energy level (1–10).
+
+```python
+from sandcat_fun import cat_fortune
+
+fortune = cat_fortune("sunny", 8)
+print(fortune)
+# "This is a zoomie-powered cat fortune for a Sunny day: ..."
+
+fortune = cat_fortune("rainy", 2)
+print(fortune)
+# "This is a nap-friendly cat fortune for a Rainy day: ..."
+```
+
+Valid weather options: `sunny`, `rainy`, `cloudy`, `snowy`, `windy`
+
+#### 6. `cat_reaction(event: str, intensity: int = 1)`
+Returns a dramatic cat reaction to common programming events. Intensity goes from 1 (mild) to 3 (maximum drama).
+
+```python
+from sandcat_fun import cat_reaction
+
+reaction = cat_reaction("bug_fixed", 2)
+print(reaction)
+# "Purrr! The sand cat does a little victory stretch! That bug never stood a chance!"
+
+reaction = cat_reaction("deploy", 3)
+print(reaction)
+# "MROW!! *hides under desk* IS IT FRIDAY?! WHY ARE WE DEPLOYING?! ROLLBACK PLAN READY?!"
+```
+
+Valid events: `bug_fixed`, `code_review`, `deploy`, `merge_conflict`, `friday`, `monday`
+
+---
+
+## Project Structure
+
+```
+3-package-sand_cat/
+├── sandcat_fun/             # Main package source code
+│   ├── __init__.py          # Package exports
+│   ├── cat.py               # cat_greeting, cat_comfort, cat_fortune
+│   ├── draw.py              # draw_cat (ASCII art)
+│   ├── fortune.py           # get_fortune
+│   └── reaction.py          # cat_reaction
+├── tests/                   # Unit tests (pytest)
+│   ├── test_cat.py
+│   ├── test_draw.py
+│   ├── test_fortune.py
+│   └── test_reaction.py
+├── demo.py                  # Example program using all functions
+├── Pipfile                  # pipenv dependency management
+├── Pipfile.lock
+├── pyproject.toml           # Build configuration
+├── .github/
+│   └── workflows/
+│       └── ci.yml           # GitHub Actions CI workflow
+├── LICENSE
+└── README.md
 ```
 
 ---
 
 ## Contributor Guide
 
-If you want to contribute to the project, follow these instructions to set up the development environment, install dependencies, run tests, and build the project on any platform.
+If you want to contribute to the project, follow these steps to set up the development environment on any platform.
 
 ### 1. Prerequisites
-Make sure you have Python 3.9+ and `pipenv` installed on your machine.
+Make sure you have Python 3.10+ and `pipenv` installed.
 ```bash
 pip install --user pipenv
 ```
 
-### 2. Setup the Environment
-Clone this repository and use `pipenv` to install all dependencies (including development tools like `pytest`, `build`, and `twine`).
-
+### 2. Clone and Setup
 ```bash
 git clone https://github.com/swe-students-spring2026/3-package-sand_cat.git
 cd 3-package-sand_cat
 
-# Create virtual environment and install dependencies
+# Create virtual environment and install all dependencies
 pipenv install --dev
 
 # Activate the virtual environment
 pipenv shell
 ```
 
-### 3. Environment Variables & Configuration
-If the project requires any specific environment variables to run properly, please refer to the `.env.example` file provided in the root directory.
+### 3. Running Tests
+We use `pytest` for unit testing. Every function has at least 3 assertions covering normal usage, edge cases, and invalid inputs.
 
-1. Copy the example file:
-   ```bash
-   cp .env.example .env
-   ```
-2. Open the `.env` file and replace the dummy values with your actual configuration keys.
-
-### 4. Running Tests
-We use `pytest` for unit testing to ensure our functions behave as expected (with a minimum of 3 assertions per function).
-
-To run the test suite:
 ```bash
-pytest -v
+pipenv run pytest -v
 ```
 
-### 5. Building the Package
-To build the distribution artifacts (wheel and source distribution) using `build`:
+### 4. Building the Package
+Build the wheel and source distribution using `build`:
 
 ```bash
 python -m build
 ```
-This will generate the built files in the `dist/` directory.
+This generates the built files in the `dist/` directory.
 
-### 6. Distributing / Publishing to PyPI
-To upload the newly built package to PyPI (or TestPyPI) using `twine`:
+### 5. Publishing to PyPI
+Upload the package to PyPI using `twine`:
 
 ```bash
-# For TestPyPI
+# For TestPyPI (testing)
 python -m twine upload --repository testpypi dist/*
 
-# For actual PyPI
+# For PyPI (production)
 python -m twine upload dist/*
 ```
 
 ---
+
+## CI/CD Overview
+
+This project uses **GitHub Actions** for continuous integration. The CI workflow (`.github/workflows/ci.yml`) automatically runs on every push and pull request:
+
+- **Builds and tests** the package on **two Python versions** (3.10 and 3.11)
+- Uses `pipenv` to install dependencies in an isolated environment
+- Runs the full `pytest` test suite to catch regressions early
+
+---
+
+## License
+
+GNU General Public License v3. See `LICENSE` for details.

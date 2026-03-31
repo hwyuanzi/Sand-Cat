@@ -4,6 +4,7 @@ from sandcat_fun import (
     cat_fortune,
     draw_cat,
     get_fortune,
+    cat_reaction,
 )
 
 def main():
@@ -27,6 +28,12 @@ def main():
 
     print("5. Get Fortune")
     print(get_fortune(5))
+    print()
+
+    print("6. Cat Reaction")
+    print(cat_reaction("bug_fixed", 3))
+    print()
+    print(cat_reaction("monday", 2))
     print()
 
 
