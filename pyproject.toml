@@ -9,6 +9,7 @@ description = "A playful cat-themed Python package with greeting, comfort, drawi
 authors     = [
   { name = "Tuo Zhang", email = "tz2714@nyu.edu" },
   { name = "Hollan Yuan", email = "hy2821@nyu.edu"},
+  { name = "Eddy Yue", email = "yy4908@nyu.edu"},
 ]
 license     = "MIT"
 readme      = "README.md"

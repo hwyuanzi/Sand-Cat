@@ -11,9 +11,7 @@
 ## Team Members
 * [Hollan Yuan](https://github.com/hwyuanzi)
 * [Tuo Zhang](https://github.com/TuoZhang0902)
-* [Team Member 3 Name](https://github.com/username3)
-* [Team Member 4 Name](https://github.com/username4)
-* [Team Member 5 Name](https://github.com/username5)
+* [Yecheng Yue](https://github.com/YechengYueEddy)
 
 ---
 
@@ -146,7 +144,3 @@ python -m twine upload dist/*
 ```
 
 ---
-
-# Python Package Exercise
-
-An exercise to create a Python package, build it, test it, distribute it, and use it. See [instructions](./instructions.md) for details.
