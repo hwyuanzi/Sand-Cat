@@ -9,14 +9,18 @@ def cat_greeting(name: str, mood: str) -> str:
     Returns:
         A cat-themed greeting string.
     """
-    if not isinstance(name, str) or not name.strip():
-        raise ValueError("name must be a non-empty string")
-
-    if not isinstance(mood, str) or not mood.strip():
-        raise ValueError("mood must be a non-empty string")
+    if not isinstance(name, str):
+        raise TypeError("name must be a string")
+    if not isinstance(mood, str):
+        raise TypeError("mood must be a string")
 
     clean_name = name.strip()
     clean_mood = mood.strip().lower()
+
+    if not clean_name:
+        raise ValueError("name must be a non-empty string")
+    if not clean_mood:
+        raise ValueError("mood must be a non-empty string")
 
     mood_messages = {
         "happy": f"Meow, {clean_name}! This sand cat is thrilled to see your happy paws today.",

@@ -124,11 +124,11 @@ def test_cat_greeting_invalid_mood():
         cat_greeting("Eddy", "angry")
 
 def test_cat_greeting_nonstring_name():
-    with pytest.raises(ValueError):
+    with pytest.raises(TypeError):
         cat_greeting(123, "happy")
 
 def test_cat_greeting_nonstring_mood():
-    with pytest.raises(ValueError):
+    with pytest.raises(TypeError):
         cat_greeting("Eddy", False)
 
 def test_cat_greeting_white_space_name():
