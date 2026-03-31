@@ -1,7 +1,7 @@
 from sandcat_fun import (
     cat_greeting,
     cat_comfort,
-    cat_fortune,
+    cat_energy,
     draw_cat,
     get_fortune,
     cat_reaction,
@@ -23,7 +23,7 @@ def main():
     print()
 
     print("4. Cat Fortune")
-    print(cat_fortune("sunny", 8))
+    print(cat_energy("sunny", 8))
     print()
 
     print("5. Get Fortune")
