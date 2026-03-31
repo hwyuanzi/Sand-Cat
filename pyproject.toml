@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name        = "sand-cat"
 version     = "0.1.0"
-description = "A playful cat-themed Python package with greeting, comfort, drawing, and fortune functions."
+description = "A playful cat-themed Python package with greetings, comfort, ASCII art, fortunes, and dramatic reactions to coding events."
 authors     = [
   { name = "Tuo Zhang", email = "tz2714@nyu.edu" },
   { name = "Hollan Yuan", email = "hy2821@nyu.edu"},

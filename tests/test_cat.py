@@ -45,7 +45,7 @@ def test_cat_fortune_invalid_energy_type():
     with pytest.raises(TypeError):
         cat_fortune("sunny", "high")
 
-# unit test for cat_fortune
+# unit test for cat_comfort
 # tests for outputs
 def test_cat_comfort_returns_string():
     result = cat_comfort(1)
